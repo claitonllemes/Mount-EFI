@@ -2,7 +2,6 @@
 
 Este script do Shortcuts app para macOS é projetado para automatizar a gestão de `partições EFI` e a personalização da interface do Finder. Ele é composto por dois componentes principais de script de shell e uma lógica condicional para controle de fluxo.
 
-
 ### Funcionalidades Principais do Script:
 
 > [!IMPORTANT]
@@ -34,6 +33,15 @@ Este script do Shortcuts app para macOS é projetado para automatizar a gestão 
 
 - Caso a partição EFI não seja encontrada ou não possa ser montada, o script gera uma notificação de erro `EFI não encontrada`.
 - Nesse caso, ele não executa as ações subsequentes relacionadas ao Finder.
+
+
+### Transparência e Segurança:
+
+- O script é um conjunto de comandos de shell abertos, os usuários podem ver exatamente o que o script faz.
+- O script não solicita nenhum download ou a instalação de software de terceiros
+- O script não solicita, coleta ou manipula dados pessoais ou sensíveis do usuário
+- O script é executado localmente no dispositivo do usuário, sem comunicação com servidores externos, o que reduz a exposição a ataques de rede.
+- As operações realizadas pelo script são específicas (montar a partição EFI, alterar configurações do Finder), e não incluem funcionalidades que poderiam ser exploradas para fins maliciosos.
 
 ### Conclusão
 
