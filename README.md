@@ -5,6 +5,10 @@ Este script do Shortcuts app para macOS é projetado para automatizar a gestão 
 
 ### Funcionalidades Principais do Script:
 
+> [!IMPORTANT]
+> O script verifica se a montagem foi feita corretametne antes de prosseguir. É importante que o usuário saiba que, se houver um problema na montagem da partição, o script `não executará` as ações subsequentes.
+
+
 ### Identificação e Montagem da Partição EFI:
 
 - O script começa identificando a partição EFI do sistema usando o comando `diskutil list`.
@@ -21,6 +25,10 @@ Este script do Shortcuts app para macOS é projetado para automatizar a gestão 
 - Quando a partição EFI é montada com sucesso, o script dispara uma notificação informando `EFI montada com sucesso`.
 - Em seguida, executa outro comando de shell script para alterar uma configuração do Finder: `defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true`. Isto faz com que os discos rígidos sejam exibidos na área de trabalho.
 - O Finder é reiniciado com `killall Finder` para aplicar a mudança.
+
+> [!WARNING]
+> O comando `killall Finder` irá reiniciar o Finder. É importante informar o usuário de que isso fechará todas as janelas do Finder e pode interromper o trabalho em andamento..
+
   
 ### Gestão de Erro:
 
