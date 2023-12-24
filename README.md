@@ -46,3 +46,7 @@ Este script do Shortcuts app para macOS é projetado para automatizar a gestão 
 ### Conclusão
 
 Este script oferece uma maneira automatizada e eficiente de gerenciar partições EFI de forma extremamente fácil e sem nenhum código de terminal. Ele é especialmente útil para usuários que precisam acessar de frequentemente a partição EFI. A integração de verificações de sucesso e gestão de erros garante que as operações sejam realizadas com segurança e eficácia.
+
+### Agradecimento especial
+
+Pensado para ajudar todos os usuários de Hackintosh pelo mundo e em especial a comunidade `Universo Hackintosh` Obrigado a todos e ao mestre @luchina-gabriel
