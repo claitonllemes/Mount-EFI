@@ -49,4 +49,4 @@ Este script oferece uma maneira automatizada e eficiente de gerenciar partiçõe
 
 ### Agradecimento especial
 
-Pensado para ajudar todos os usuários de Hackintosh pelo mundo e em especial a comunidade `Universo Hackintosh` Obrigado a todos e ao mestre @luchina-gabriel
+Pensado para ajudar todos os usuários de Hackintosh pelo mundo e em especial a comunidade `Universo Hackintosh` Obrigado a todos e ao mestre [@luchina-gabriel](https://github.com/luchina-gabriel)
