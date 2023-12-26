@@ -1,4 +1,16 @@
-# Claiton Lemes - Universo Hackintosh
+#!/bin/bash
+
+# Função para imprimir mensagens de erro
+print_error() {
+    echo "Erro: $1"
+}
+
+# Verifica se o diskutil está disponível
+if ! command -v diskutil &> /dev/null; then
+    print_error "diskutil não encontrado. Este script requer diskutil."
+    exit 1
+fi
+
 # Lista todos os discos com esquema de partição GPT
 GUID_DISKS=$(diskutil list | grep 'GUID_partition_scheme' | awk '{print $NF}')
 
@@ -6,7 +18,7 @@ GUID_DISKS=$(diskutil list | grep 'GUID_partition_scheme' | awk '{print $NF}')
 EFI_MOUNTED=false
 
 # Verifica cada disco GPT para encontrar e montar a partição EFI
-echo "$GUID_DISKS" | while read -r disk; do
+for disk in $GUID_DISKS; do
     # Alterado para corresponder exatamente com a partição chamada 'EFI'
     EFI_PARTITION=$(diskutil list "$disk" | awk '/ EFI / {print $NF}' | head -n 1)
     if [ -n "$EFI_PARTITION" ]; then
@@ -19,9 +31,9 @@ done
 
 # Verifica se a partição EFI foi montada com sucesso
 if [ "$EFI_MOUNTED" = true ]; then
-    echo "EFI montada com sucesso"
+    echo "✅ EFI montada com sucesso"
 else
-    echo "Erro: Nenhuma partição EFI encontrada."
+    print_error "❌ Nenhuma partição EFI encontrada."
 fi
 
 # Exibe os discos na area de trabalho
